@@ -10,6 +10,12 @@
         event.preventDefault();
     });
 
+    // Randomize Background Image
+    var bgArray = ['../img/Bck1.jpg','../img/Bck2.jpg'],
+    selectBG = bgArray[Math.floor(Math.random() * bgColorArray.length)];
+
+    $('#mainHeader').css('background-image', 'url(selectBG)')
+
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
